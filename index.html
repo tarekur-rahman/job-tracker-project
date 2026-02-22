@@ -17,20 +17,20 @@
 </head>
 <body class="bg-[#F8FAFC]">
 
-    <section class=" hero w-[70%] mx-auto mt-20 border-b border-gray-300 mb-10">
+    <section class="hero w-[95%] md:w-[70%] mx-auto mt-20 border-b border-gray-300 mb-10">
         <h1 class="text-3xl text-[#002C5C] font-bold" >Job Application Tracker</h1>
         <div class="card-hero flex items-center justify-between my-10 ">
-            <div id="total" class="p-6 bg-white w-[32%] rounded-2xl space-y-2 shadow">
+            <div id="" class="p-6 bg-white w-[32%] rounded-2xl space-y-2 shadow">
                  <h4>Total</h4>
-                 <p class="font-bold text-2xl">8</p>
+                 <p class="font-bold text-2xl " id="total-count">8</p>
                 </div>
             <div id="interview" class="p-6 bg-white w-[32%] rounded-2xl space-y-2 shadow">
                  <h4>Interview</h4>
-                 <p class="font-bold text-2xl text-[#10B981]">0</p>
+                 <p class="font-bold text-2xl text-[#10B981]" id="interview-count">0</p>
                 </div>
             <div id="rejected" class="p-6 bg-white w-[32%] rounded-2xl space-y-2 shadow">
                  <h4>Rejected</h4>
-                 <p class="font-bold text-2xl text-red-600"> 0</p>
+                 <p class="font-bold text-2xl text-red-600" id="rejected-count"> 0</p>
                 </div>
                 
         </div>
@@ -39,22 +39,15 @@
     <section class="second-sec w-[70%] mx-auto mb-6">
         <div class="flex items-center mb-7 justify-between">
             <h2 class="text-xl text-[#002C5C] font-bold ">Available Jobs</h2>
-            <p class="text-gray-600">8 jobs</p>
+            <p class="text-gray-600"><span id="job-count-text">8</span> jobs</p>
         </div>
         <div class="tab flex gap-2 items-center ">
-           <a href="index.html" class="inline-block py-1 px-4 bg-blue-500 text-white font-medium rounded-lg transition">
-          All
-            </a>
-
-        <a href="interview.html" class="inline-block py-1 px-4 bg-white border border-gray-200 text-gray-600 font-medium rounded-lg hover:bg-gray-50 transition">
-        Interview
-        </a>
-
-        <a href="rejected.html" class="inline-block py-1 px-4 bg-white border border-gray-200 text-gray-600 font-medium rounded-lg hover:bg-gray-50 transition">
-        Rejected
-        </a>
-
-        </div>
+        <button id="btn-all" class="py-1 px-4 bg-blue-500 text-white rounded-lg">All</button>
+        
+        <button id="btn-interview" class="py-1 px-4 bg-white border rounded-lg">Interview</button>
+        
+        <button id="btn-rejected" class="py-1 px-4 bg-white border rounded-lg">Rejected</button>
+    </div>
         
       </section>
 
@@ -63,30 +56,19 @@
         <div class="job-card space-y-5 bg-white p-9 rounded-[8px] shadow">
             <div class="flex items-center justify-between">
                 <h2 class="text font-bold text-[#002C5C]">Mobile First Corp</h2>
-                <button class="p-2 bg-gray-300 rounded-full hover:bg-gray-100"><i class="fa-regular fa-trash-can"></i></button>
+                <button class=" delete-btn p-2 bg-gray-300 rounded-full hover:bg-gray-100"><i class="fa-regular fa-trash-can"></i></button>
             </div>
             <p class="text-[#64748B] text-[16px]">React Native Developer</p>
             <p class="text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
             <button class="bg-[#EEF4FF] px-6 py-2 rounded-[5px] text-[14px] font-bold text-[#323B49] uppercase">Not Applied</button>
             <p class="text-[#323B49] text-[15px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
             <div class="btn-div flex items-center gap-3">
-                <button class="border border-[#10b981] text-[#10b981] px-4 py-2 rounded-md text-sm font-bold uppercase hover:bg-[#10b981] hover:text-white" >Interview</button>
-                <button class="border border-[#ef4444] text-[#ef4444] px-4 py-2 rounded-md text-sm font-bold uppercase  hover:bg-[#ef4444] hover:text-white" >Rejected</button>
+                <button class=" interview-btn border border-[#10b981] text-[#10b981] px-4 py-2 rounded-md text-sm font-bold uppercase hover:bg-[#10b981] hover:text-white" >Interview</button>
+                <button class=" rejected-btn border border-[#ef4444] text-[#ef4444] px-4 py-2 rounded-md text-sm font-bold uppercase  hover:bg-[#ef4444] hover:text-white" >Rejected</button>
             </div>
         </div>
 
-        <div class="job-card space-y-5 bg-white p-9 rounded-[8px] shadow">
-            <h2 class="text font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-[#64748B] text-[16px]">React Native Developer</p>
-            <p class="text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
-            <button class="bg-[#EEF4FF] px-6 py-2 rounded-[5px] text-[14px] font-bold text-[#323B49] uppercase">Not Applied</button>
-            <p class="text-[#323B49] text-[15px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-            <div class="btn-div flex items-center gap-3">
-                <button class="border border-[#10b981] text-[#10b981] px-4 py-2 rounded-md text-sm font-bold uppercase hover:bg-[#10b981] hover:text-white" >Interview</button>
-                <button class="border border-[#ef4444] text-[#ef4444] px-4 py-2 rounded-md text-sm font-bold uppercase  hover:bg-[#ef4444] hover:text-white" >Rejected</button>
-            </div>
-        </div>
-
+        
     
            
          
@@ -96,6 +78,6 @@
     
 
     
-    
+    <script src="script/script.js"></script>
 </body>
 </html>
